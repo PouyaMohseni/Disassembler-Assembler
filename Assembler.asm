@@ -1,7 +1,3 @@
-Gmail	Pouya Mohseni <pouyamohseniii@gmail.com>
-(no subject)
-Pouya Mohseni <pouyamohseniii@gmail.com>	Wed, Aug 3, 2022 at 5:42 AM
-To: Pouya Mohseni <pouyamohseniii@gmail.com>
 %include "in_out.asm"
 section .data
 
