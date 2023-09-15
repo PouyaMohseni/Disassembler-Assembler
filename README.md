@@ -2,16 +2,16 @@
 
 ## Overview
 
-This project comprises both a Disassembler and an Assembler implemented in 8086 Assembly language and Python. Assembly language is a low-level programming language with a strong correspondence between its instructions and the architecture's machine code instructions.
+This project comprises both a Disassembler and an Assembler implemented in 8086 Assembly language and Python. These programs are designed to work with the 8086 Assembly language, a low-level programming language with a strong correspondence between its instructions and the machine code instructions of the 8086 architecture.
 
-- An **assembler** is a program that takes basic computer instructions and converts them into a pattern of bits that the computer's processor can use to perform its operations.
+- An **assembler** is a tool for low-level programming. It takes basic computer instructions written in assembly language and converts them into binary patterns of bits that the computer's processor can execute. The assembler is responsible for translating human-readable assembly code into machine code that the computer can understand and execute.
 
-- A **disassembler** is a computer program that translates machine language into assembly language, which is the inverse operation to that of an assembler. It's different from a decompiler, which targets a high-level language.
+- A **disassembler**, on the other hand, performs the inverse operation of an assembler. It takes machine code, represented as binary patterns of bits, and translates it back into human-readable assembly language. This is particularly useful for reverse engineering, debugging, and analyzing binary executables.
 
 ## Supported Instructions
 
 Both the assembler and disassembler can understand and interpret the following instructions:
-
+### Data Movement
 | Instruction  | Description                     |
 |--------------|---------------------------------|
 | mov          | Move data between registers/memory |
@@ -24,6 +24,10 @@ Both the assembler and disassembler can understand and interpret the following i
 | xor          | Bitwise XOR                     |
 | dec          | Decrement                       |
 | inc          | Increment                       |
+
+### Logical and Arithmetic
+| Instruction  | Description                     |
+|--------------|---------------------------------|
 | cmp          | Compare                         |
 | test         | Logical AND                     |
 | xchg         | Exchange values of two operands |
@@ -40,9 +44,17 @@ Both the assembler and disassembler can understand and interpret the following i
 | shr          | Shift Right                     |
 | neg          | Negate                          |
 | not          | Bitwise NOT                     |
+
+### Control Flow
+| Instruction  | Description                     |
+|--------------|---------------------------------|
 | call         | Call a procedure                |
 | ret          | Return from procedure           |
 | syscall      | System Call                     |
+
+### Stack Operations
+| Instruction  | Description                     |
+|--------------|---------------------------------|
 | push         | Push value onto stack           |
 | pop          | Pop value from stack            |
 
