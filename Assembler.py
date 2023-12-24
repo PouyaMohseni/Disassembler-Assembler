@@ -3,6 +3,7 @@ W = "" #8-16-32 bit registers
 S = "" #sign
 D = "" #Source
 
+# REX prefixes for 64-bit mode
 REXField ="0"
 REX = "" #64bit mode
 WREX = "0"
@@ -10,13 +11,16 @@ RREX = "0"
 XREX = "0"
 BREX = "0"
 
-PTR2Size = "32"
-SelfGenCode = ""
-OneInstCode = ""
+PTR2Size = "32"  # Default pointer size
+SelfGenCode = ""  # Placeholder for generated code
+OneInstCode = ""  # Placeholder for single instruction code
 
+# Prefixes for different address and operand sizes
 PrefixAdd = {64: "",32: "67"}
 PrefixOp = {64: "",32: "",16: "01100110", 8: ""}
 SIZEOF = {"BYTE":"8", "WORD":"16", "DWORD":"32", "QWORD":"64"}
+
+# Opcode values for various instructions
 OperandCode = {"mov":"100010", "add":"000000", "adc":"000100", "sub":"001010", "sbb":"000110",
                "and":"001000", "or":"000010", "xor":"001100", "dec":"", "inc":"",
                "cmp":"001110", "test":"100001", "xchg":"100001", "xadd":"110000",
@@ -27,6 +31,7 @@ OperandCode = {"mov":"100010", "add":"000000", "adc":"000100", "sub":"001010", "
                "shl":"", "shr":"", "neg":"", "not":"",	
                "call":"", "ret":"", "syscall":"" ,"push":"", "pop":""}
 
+# Operand codes for specific instructions
 OperandImCode = {"add":"100000", "mov":"1100011", "adc":"100000"}
 OperandAltCode = {"add":"00000", "mov":"100010", "jmp":"00110"}
 Reg_OpCode = {"add":"010", "adc":"000","and":"100","or":"001"}
